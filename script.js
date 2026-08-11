@@ -1,44 +1,50 @@
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+// Mobile menu
 
-menuBtn.addEventListener("click", function () {
-  navMenu.classList.toggle("open");
-});
+const menuButton = document.getElementById("menuButton");
+const navigation = document.querySelector(".main-nav");
 
+if (menuButton) {
+  menuButton.addEventListener("click", function () {
 
-document.querySelectorAll("nav a").forEach(function(link) {
-  link.addEventListener("click", function() {
-    navMenu.classList.remove("open");
+    if (navigation.style.display === "flex") {
+      navigation.style.display = "";
+    } else {
+      navigation.style.display = "flex";
+      navigation.style.flexDirection = "column";
+      navigation.style.position = "absolute";
+      navigation.style.top = "68px";
+      navigation.style.right = "15px";
+      navigation.style.padding = "18px 22px";
+      navigation.style.background = "#ffffff";
+      navigation.style.border = "1px solid #e1e6ef";
+      navigation.style.borderRadius = "8px";
+      navigation.style.boxShadow = "0 10px 25px rgba(20,40,80,.12)";
+      navigation.style.zIndex = "100";
+    }
+
   });
-});
+}
 
 
-document.querySelectorAll(".faq-item button").forEach(function(button) {
+// FAQ accordion
+
+const faqButtons = document.querySelectorAll(".faq-item button");
+
+faqButtons.forEach(function(button) {
 
   button.addEventListener("click", function() {
 
-    const answer = this.nextElementSibling;
-    const icon = this.querySelector("span");
+    const currentItem = button.parentElement;
 
-    document.querySelectorAll(".answer").forEach(function(item) {
-      if (item !== answer) {
-        item.style.display = "none";
+    document.querySelectorAll(".faq-item").forEach(function(item) {
+
+      if (item !== currentItem) {
+        item.classList.remove("active");
       }
+
     });
 
-    document.querySelectorAll(".faq-item button span").forEach(function(item) {
-      if (item !== icon) {
-        item.textContent = "+";
-      }
-    });
-
-    if (answer.style.display === "block") {
-      answer.style.display = "none";
-      icon.textContent = "+";
-    } else {
-      answer.style.display = "block";
-      icon.textContent = "−";
-    }
+    currentItem.classList.toggle("active");
 
   });
 
