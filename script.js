@@ -1,19 +1,12 @@
-document.querySelectorAll("nav a").forEach(function(link) {
-
-  link.addEventListener("click", function(event) {
-
-    const target = document.querySelector(
-      this.getAttribute("href")
-    );
+document.querySelectorAll("a[href^='#']").forEach(function(link) {
+  link.addEventListener("click", function(e) {
+    const target = document.querySelector(this.getAttribute("href"));
 
     if (target) {
-      event.preventDefault();
-
+      e.preventDefault();
       target.scrollIntoView({
         behavior: "smooth"
       });
     }
-
   });
-
 });
