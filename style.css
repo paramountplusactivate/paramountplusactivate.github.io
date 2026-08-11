@@ -112,107 +112,219 @@ a {
 ================================ */
 
 .hero {
-  padding: 72px 0 58px;
-
-  background:
-    radial-gradient(
-      circle at 88% 25%,
-      rgba(35, 91, 220, .06),
-      transparent 28%
-    ),
-    #ffffff;
+  padding: 65px 0 55px;
+  background: #ffffff;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.02fr .98fr;
-
+  grid-template-columns: 1fr 0.78fr;
   align-items: center;
-
-  gap: 65px;
+  gap: 55px;
 }
 
-
-/* LEFT HERO */
+/* LEFT CONTENT */
 
 .hero-content {
-  padding-right: 10px;
-}
-
-.eyebrow {
-  color: #1554d1;
-
-  font-size: 12px;
-  font-weight: bold;
-
-  letter-spacing: .7px;
-}
-
-.eyebrow-line {
-  width: 46px;
-  height: 3px;
-
-  margin-top: 10px;
-  margin-bottom: 23px;
-
-  background: #2460df;
+  order: 1;
+  padding-right: 5px;
 }
 
 .hero h1 {
   max-width: 650px;
-
-  color: #13264f;
-
-  font-size: 46px;
-  line-height: 1.12;
-
-  letter-spacing: -.8px;
+  color: #14264d;
+  font-size: 43px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
 }
 
 .hero h1 span {
-  color: #1558dc;
+  color: #1558d9;
 }
 
 .hero-text {
   max-width: 620px;
-
-  margin-top: 25px;
-
-  color: #5d6c86;
-
+  margin-top: 22px;
+  color: #66738a;
   font-size: 17px;
   line-height: 1.75;
 }
 
-.primary-button {
-  display: inline-flex;
+/* RIGHT ACTIVATION BOX */
+
+.activation-card {
+  order: 2;
+
+  width: 100%;
+  max-width: 430px;
+  min-height: 350px;
+
+  justify-self: end;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: #111a3c;
+
+  border: 10px solid #f4f7fd;
+
+  box-shadow:
+    0 18px 45px rgba(25, 55, 120, 0.16),
+    0 0 0 1px #e5eaf3;
+
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle attractive decoration */
+
+.activation-card::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -65px;
+  top: -65px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.activation-card::after {
+  content: "";
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  left: -55px;
+  bottom: -50px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.card-header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 18px;
 
-  margin-top: 27px;
+  text-align: center;
 
-  padding: 14px 23px;
+  gap: 16px;
 
-  border-radius: 7px;
+  padding-top: 15px;
 
-  background: #1455d9;
-  color: #ffffff;
+  border: 0;
+}
 
-  font-size: 14px;
+.card-logo {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #122a65;
+
+  font-size: 20px;
   font-weight: bold;
 
-  box-shadow: 0 8px 20px rgba(20, 85, 217, .18);
-
-  transition: all .2s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,.12);
 }
 
-.primary-button:hover {
-  background: #0e46bd;
-  transform: translateY(-2px);
+.card-label {
+  display: none;
 }
 
-.primary-button span {
-  font-size: 19px;
+.activation-card h2 {
+  margin-top: 3px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.card-description {
+  position: relative;
+  z-index: 2;
+
+  max-width: 330px;
+
+  margin: 14px auto 25px;
+
+  text-align: center;
+
+  color: #dce4f5;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* CODE AREA */
+
+.activation-steps {
+  display: none;
+}
+
+.card-status {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  margin: 0 auto;
+
+  padding: 18px 15px;
+
+  max-width: 365px;
+
+  text-align: center;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #132653;
+
+  box-shadow: 0 5px 16px rgba(0,0,0,.10);
+}
+
+.card-status::before {
+  content: "XXXX-XXXX";
+
+  display: block;
+
+  color: #132653;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+.card-status strong,
+.card-status span,
+.status-icon {
+  display: none;
 }
 
 
