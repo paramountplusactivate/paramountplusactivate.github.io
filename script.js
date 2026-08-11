@@ -1,59 +1,43 @@
-const mobileMenu = document.getElementById("mobileMenu");
-const navigation = document.getElementById("navigation");
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-mobileMenu.addEventListener("click", function () {
-  navigation.classList.toggle("active");
+menuBtn.addEventListener("click", function () {
+  navMenu.classList.toggle("open");
 });
 
 
-const navigationLinks = document.querySelectorAll(".navigation a");
-
-navigationLinks.forEach(function (link) {
-
-  link.addEventListener("click", function () {
-    navigation.classList.remove("active");
+document.querySelectorAll("nav a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    navMenu.classList.remove("open");
   });
-
 });
 
 
-const faqQuestions = document.querySelectorAll(".faq-question");
+document.querySelectorAll(".faq-item button").forEach(function(button) {
 
-faqQuestions.forEach(function (question) {
+  button.addEventListener("click", function() {
 
-  question.addEventListener("click", function () {
+    const answer = this.nextElementSibling;
+    const icon = this.querySelector("span");
 
-    const currentAnswer = this.nextElementSibling;
-    const currentIcon = this.querySelector("b");
-
-    document.querySelectorAll(".faq-answer").forEach(function (answer) {
-
-      if (answer !== currentAnswer) {
-        answer.style.display = "none";
+    document.querySelectorAll(".answer").forEach(function(item) {
+      if (item !== answer) {
+        item.style.display = "none";
       }
-
     });
 
-
-    document.querySelectorAll(".faq-question b").forEach(function (icon) {
-
-      if (icon !== currentIcon) {
-        icon.textContent = "+";
+    document.querySelectorAll(".faq-item button span").forEach(function(item) {
+      if (item !== icon) {
+        item.textContent = "+";
       }
-
     });
 
-
-    if (currentAnswer.style.display === "block") {
-
-      currentAnswer.style.display = "none";
-      currentIcon.textContent = "+";
-
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      icon.textContent = "+";
     } else {
-
-      currentAnswer.style.display = "block";
-      currentIcon.textContent = "−";
-
+      answer.style.display = "block";
+      icon.textContent = "−";
     }
 
   });
