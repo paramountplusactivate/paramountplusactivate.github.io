@@ -10,147 +10,181 @@
 
 <style>
 
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f5f8fd;
+  color: #17284d;
   line-height: 1.7;
 }
 
-/* BLUE HEADER */
-
-.site-header {
-  background: #172b4d;
-  padding: 22px 15px;
-  text-align: center;
-}
-
-.header-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.site-header h1 {
-  color: #ffffff;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.3;
-  text-align: center;
-  margin: 0;
-}
-
-/* MAIN CONTENT */
-
 .container {
+  width: 92%;
   max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  background: linear-gradient(135deg, #071c4d, #103d91 55%, #1768d8);
+  color: #fff;
+  padding: 55px 0 60px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 25px;
+  color: #e1ebff;
+  font-size: 17px;
+}
+
+/* BUTTON */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+  padding: 13px 25px;
+  border-radius: 30px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  color: #123d91 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  transition: .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* MAIN */
+
+main {
+  background: #fff;
+  padding: 65px 0;
 }
 
 h2 {
-  font-size: 26px;
-  color: #172b4d;
-  margin-top: 35px;
+  color: #123d91;
+  font-size: 30px;
+  margin: 35px 0 15px;
 }
 
 h3 {
-  font-size: 22px;
-  color: #172b4d;
-  margin-top: 30px;
+  color: #173568;
+  font-size: 21px;
+  margin-top: 28px;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 17px;
+  color: #56657d;
+  font-size: 16px;
+  margin-bottom: 18px;
 }
 
-ul, ol {
-  padding-left: 25px;
+ol,
+ul {
+  margin: 15px 0 25px 25px;
 }
 
 li {
-  margin-bottom: 8px;
+  color: #56657d;
+  margin-bottom: 9px;
 }
 
-/* ACTIVATION BUTTON */
-
-.activate-button {
-  display: block;
-  width: fit-content;
-  margin: 0 auto 30px;
-  padding: 13px 28px;
-  background: #000;
-  color: #fff !important;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 17px;
-  font-weight: bold;
+strong {
+  color: #173568;
 }
 
-.activate-button:hover {
-  background: #222;
+/* FAQ */
+
+.faq {
+  margin-top: 35px;
 }
 
 /* FOOTER */
 
 footer {
-  background: #172b4d;
-  color: #ffffff;
-  padding: 25px 0;
-  margin-top: 40px;
-}
-
-footer .footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 30px;
-  box-sizing: border-box;
+  background: #071225;
+  color: #aebbd0;
+  padding: 35px 0;
+  text-align: center;
+  font-size: 13px;
 }
 
 footer p {
-  color: #ffffff;
-  text-align: center;
-  margin: 0 0 15px;
-  font-size: 14px;
+  color: #aebbd0;
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 .disclaimer {
-  color: #ffffff;
-  text-align: center;
-  font-size: 14px;
+  max-width: 800px;
+  margin: 15px auto 0;
+  color: #8f9db3;
+  font-size: 12px;
   line-height: 1.6;
 }
 
 .disclaimer strong {
-  color: #ffffff;
+  color: #aebbd0;
 }
 
 /* MOBILE */
 
 @media (max-width: 600px) {
 
-  .site-header {
-    padding: 20px 15px;
+  .hero h1 {
+    font-size: 31px;
   }
 
-  .site-header h1 {
-    font-size: 25px;
-  }
-
-  .container {
-    margin: 20px 15px;
-    padding: 20px;
+  .hero p {
+    font-size: 14px;
   }
 
   h2 {
-    font-size: 23px;
+    font-size: 26px;
   }
 
-  p {
-    font-size: 16px;
+  .container {
+    width: 88%;
+  }
+
+  header {
+    padding: 40px 0 45px;
+  }
+
+  .logo {
+    margin-bottom: 30px;
   }
 
 }
@@ -160,141 +194,165 @@ footer p {
 
 <body>
 
-<!-- HEADER -->
+<header>
 
-<header class="site-header">
-  <div class="header-content">
-    <h1>Paramount+ Supported Devices – Setup &amp; Activation Guide</h1>
+  <div class="container">
+
+    <div class="logo">
+      Paramount+ Activation Guide
+    </div>
+
+    <div class="hero">
+
+      <h1>
+        Paramount+ Supported Devices – Setup &amp; Activation Guide
+      </h1>
+
+      <a href="https://par.redircoms.com/" class="btn">
+        Activate Paramount+ Now
+      </a>
+
+    </div>
+
   </div>
+
 </header>
 
-<!-- MAIN CONTENT -->
+<main>
 
-<div class="container">
+  <div class="container">
 
-  <a class="activate-button" href="https://par.redircoms.com/">
-    Activate Paramount+ Now
-  </a>
+    <p>
+      Paramount+ works with a wide range of smart TVs and streaming devices, making it easy to watch movies, shows, live sports, and other content on your preferred screen. Before starting, make sure your device is compatible, connected to the internet, and has the latest version of the Paramount+ app.
+    </p>
 
-  <p>
-    Paramount+ works with a wide range of smart TVs and streaming devices, making it easy to watch movies, shows, live sports, and other content on your preferred screen. Before starting, make sure your device is compatible, connected to the internet, and has the latest version of the Paramount+ app.
-  </p>
+    <h2>Which Devices Support Paramount+?</h2>
 
-  <h2>Which Devices Support Paramount+?</h2>
+    <p>
+      Paramount+ is available on many popular streaming platforms and smart TV systems. Depending on your device and region, you may be able to install the Paramount+ app and sign in directly.
+    </p>
 
-  <p>
-    Paramount+ is available on many popular streaming platforms and smart TV systems. Depending on your device and region, you may be able to install the Paramount+ app and sign in directly.
-  </p>
+    <p>
+      Commonly supported device categories include:
+    </p>
 
-  <p>Commonly supported device categories include:</p>
+    <ul>
+      <li><strong>Roku devices</strong></li>
+      <li><strong>Amazon Fire TV</strong></li>
+      <li><strong>Apple TV</strong></li>
+      <li><strong>Android TV and Google TV</strong></li>
+      <li><strong>Samsung Smart TVs</strong></li>
+      <li><strong>LG Smart TVs</strong></li>
+      <li><strong>Vizio Smart TVs</strong></li>
+      <li><strong>PlayStation and other supported gaming consoles</strong></li>
+    </ul>
 
-  <ul>
-    <li><strong>Roku devices</strong></li>
-    <li><strong>Amazon Fire TV</strong></li>
-    <li><strong>Apple TV</strong></li>
-    <li><strong>Android TV and Google TV</strong></li>
-    <li><strong>Samsung Smart TVs</strong></li>
-    <li><strong>LG Smart TVs</strong></li>
-    <li><strong>Vizio Smart TVs</strong></li>
-    <li><strong>PlayStation and other supported gaming consoles</strong></li>
-  </ul>
+    <p>
+      Availability can vary by device model, operating system, and location. Check your device's app store to see whether the Paramount+ app is available.
+    </p>
 
-  <p>
-    Availability can vary by device model, operating system, and location. Check your device's app store to see whether the Paramount+ app is available.
-  </p>
+    <h2>How to Set Up Paramount+ on a Supported Device</h2>
 
-  <h2>How to Set Up Paramount+ on a Supported Device</h2>
+    <p>
+      Setting up Paramount+ is generally straightforward:
+    </p>
 
-  <p>Setting up Paramount+ is generally straightforward:</p>
+    <ol>
+      <li>Connect your TV or streaming device to the internet.</li>
+      <li>Open the device's app store.</li>
+      <li>Search for the <strong>Paramount+</strong> app.</li>
+      <li>Download and install the app.</li>
+      <li>Open Paramount+ after installation.</li>
+      <li>Select <strong>Sign In</strong> or the available activation option.</li>
+      <li>Follow the instructions displayed on your TV screen.</li>
+      <li>If an activation code appears, use the provided activation page to complete the sign-in process.</li>
+      <li>Return to the Paramount+ app and wait for your account to connect.</li>
+    </ol>
 
-  <ol>
-    <li>Connect your TV or streaming device to the internet.</li>
-    <li>Open the device's app store.</li>
-    <li>Search for the <strong>Paramount+</strong> app.</li>
-    <li>Download and install the app.</li>
-    <li>Open Paramount+ after installation.</li>
-    <li>Select <strong>Sign In</strong> or the available activation option.</li>
-    <li>Follow the instructions displayed on your TV screen.</li>
-    <li>If an activation code appears, use the provided activation page to complete the sign-in process.</li>
-    <li>Return to the Paramount+ app and wait for your account to connect.</li>
-  </ol>
+    <p>
+      Once activation is complete, you can browse the Paramount+ library and start streaming.
+    </p>
 
-  <p>
-    Once activation is complete, you can browse the Paramount+ library and start streaming.
-  </p>
+    <h2>Paramount+ Activation by Device</h2>
 
-  <h2>Paramount+ Activation by Device</h2>
+    <p>
+      Different devices may use slightly different sign-in or activation steps. For device-specific instructions, follow the guide that matches your setup:
+    </p>
 
-  <p>
-    Different devices may use slightly different sign-in or activation steps. For device-specific instructions, follow the guide that matches your setup:
-  </p>
+    <ul>
+      <li><strong>Roku:</strong> Install Paramount+, open the app, and follow the on-screen activation instructions.</li>
 
-  <ul>
-    <li><strong>Roku:</strong> Install Paramount+, open the app, and follow the on-screen activation instructions.</li>
+      <li><strong>Fire TV:</strong> Search for Paramount+ in the Amazon Appstore, install it, and sign in.</li>
 
-    <li><strong>Fire TV:</strong> Search for Paramount+ in the Amazon Appstore, install it, and sign in.</li>
+      <li><strong>Apple TV:</strong> Download Paramount+ from the App Store and complete the sign-in process.</li>
 
-    <li><strong>Apple TV:</strong> Download Paramount+ from the App Store and complete the sign-in process.</li>
+      <li><strong>Samsung Smart TV:</strong> Open the Samsung app store, install Paramount+, and follow the displayed instructions.</li>
 
-    <li><strong>Samsung Smart TV:</strong> Open the Samsung app store, install Paramount+, and follow the displayed instructions.</li>
+      <li><strong>LG Smart TV:</strong> Find Paramount+ in the LG Content Store and complete the setup.</li>
 
-    <li><strong>LG Smart TV:</strong> Find Paramount+ in the LG Content Store and complete the setup.</li>
+      <li><strong>Android TV:</strong> Download Paramount+ through Google Play and follow the activation instructions.</li>
+    </ul>
 
-    <li><strong>Android TV:</strong> Download Paramount+ through Google Play and follow the activation instructions.</li>
-  </ul>
+    <h2>Paramount+ Device Activation Not Working?</h2>
 
-  <h2>Paramount+ Device Activation Not Working?</h2>
+    <p>
+      If you cannot activate Paramount+ on your device, try these basic troubleshooting steps:
+    </p>
 
-  <p>
-    If you cannot activate Paramount+ on your device, try these basic troubleshooting steps:
-  </p>
+    <ul>
+      <li>Check your internet connection.</li>
+      <li>Restart the Paramount+ app.</li>
+      <li>Restart your TV or streaming device.</li>
+      <li>Make sure the Paramount+ app is updated.</li>
+      <li>Check that your device software is up to date.</li>
+      <li>Generate a new activation code if the previous one is no longer accepted.</li>
+      <li>Make sure you are using the correct Paramount+ account.</li>
+      <li>Reinstall the app if the problem continues.</li>
+    </ul>
 
-  <ul>
-    <li>Check your internet connection.</li>
-    <li>Restart the Paramount+ app.</li>
-    <li>Restart your TV or streaming device.</li>
-    <li>Make sure the Paramount+ app is updated.</li>
-    <li>Check that your device software is up to date.</li>
-    <li>Generate a new activation code if the previous one is no longer accepted.</li>
-    <li>Make sure you are using the correct Paramount+ account.</li>
-    <li>Reinstall the app if the problem continues.</li>
-  </ul>
+    <div class="faq">
 
-  <h3>Frequently Asked Questions</h3>
+      <h2>Frequently Asked Questions</h2>
 
-  <p>
-    <strong>Which devices can I use for Paramount+?</strong><br>
-    Paramount+ supports a variety of smart TVs, streaming devices, mobile platforms, and gaming devices. Availability depends on the specific device and region.
-  </p>
+      <h3>Which devices can I use for Paramount+?</h3>
 
-  <p>
-    <strong>Can I activate Paramount+ on Roku?</strong><br>
-    Yes. Install the Paramount+ app on a supported Roku device and follow the sign-in or activation instructions shown on the screen.
-  </p>
+      <p>
+        Paramount+ supports a variety of smart TVs, streaming devices, mobile platforms, and gaming devices. Availability depends on the specific device and region.
+      </p>
 
-  <p>
-    <strong>Can I use Paramount+ on Fire TV?</strong><br>
-    Yes. Search for Paramount+ in the Amazon Appstore, install it, and follow the sign-in instructions.
-  </p>
+      <h3>Can I activate Paramount+ on Roku?</h3>
 
-  <p>
-    <strong>Why can't I find the Paramount+ app on my TV?</strong><br>
-    The app may not be supported on your particular TV model, operating system, or region. Check the TV's app store and make sure its software is updated.
-  </p>
+      <p>
+        Yes. Install the Paramount+ app on a supported Roku device and follow the sign-in or activation instructions shown on the screen.
+      </p>
 
-  <h2>Start Watching Paramount+</h2>
+      <h3>Can I use Paramount+ on Fire TV?</h3>
 
-  <p>
-    Choose the device you want to use, install the Paramount+ app, and follow the on-screen instructions to complete setup. Once your device is connected to your account, you can start watching Paramount+.
-  </p>
+      <p>
+        Yes. Search for Paramount+ in the Amazon Appstore, install it, and follow the sign-in instructions.
+      </p>
 
-</div>
+      <h3>Why can't I find the Paramount+ app on my TV?</h3>
 
-<!-- FOOTER -->
+      <p>
+        The app may not be supported on your particular TV model, operating system, or region. Check the TV's app store and make sure its software is updated.
+      </p>
+
+    </div>
+
+    <h2>Start Watching Paramount+</h2>
+
+    <p>
+      Choose the device you want to use, install the Paramount+ app, and follow the on-screen instructions to complete setup. Once your device is connected to your account, you can start watching Paramount+.
+    </p>
+
+  </div>
+
+</main>
 
 <footer>
 
-  <div class="footer-container">
+  <div class="container">
 
     <p>
       © 2026 Paramount+ Activation Guide. Informational website only.
