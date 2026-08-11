@@ -1,44 +1,60 @@
-function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  nav.classList.toggle("active");
-}
+const mobileMenu = document.getElementById("mobileMenu");
+const navigation = document.getElementById("navigation");
+
+mobileMenu.addEventListener("click", function () {
+  navigation.classList.toggle("active");
+});
 
 
-const faqQuestions = document.querySelectorAll(".faq-question");
+const navigationLinks = document.querySelectorAll(".navigation a");
 
-faqQuestions.forEach(function(question) {
+navigationLinks.forEach(function (link) {
 
-  question.addEventListener("click", function() {
-
-    const answer = this.nextElementSibling;
-    const icon = this.querySelector("span");
-
-    if (answer.style.display === "block") {
-
-      answer.style.display = "none";
-      icon.textContent = "+";
-
-    } else {
-
-      answer.style.display = "block";
-      icon.textContent = "−";
-
-    }
-
+  link.addEventListener("click", function () {
+    navigation.classList.remove("active");
   });
 
 });
 
 
-const navLinks = document.querySelectorAll("nav a");
+const faqQuestions = document.querySelectorAll(".faq-question");
 
-navLinks.forEach(function(link) {
+faqQuestions.forEach(function (question) {
 
-  link.addEventListener("click", function() {
+  question.addEventListener("click", function () {
 
-    const nav = document.getElementById("navMenu");
+    const currentAnswer = this.nextElementSibling;
+    const currentIcon = this.querySelector("b");
 
-    nav.classList.remove("active");
+    document.querySelectorAll(".faq-answer").forEach(function (answer) {
+
+      if (answer !== currentAnswer) {
+        answer.style.display = "none";
+      }
+
+    });
+
+
+    document.querySelectorAll(".faq-question b").forEach(function (icon) {
+
+      if (icon !== currentIcon) {
+        icon.textContent = "+";
+      }
+
+    });
+
+
+    if (currentAnswer.style.display === "block") {
+
+      currentAnswer.style.display = "none";
+      currentIcon.textContent = "+";
+
+    } else {
+
+      currentAnswer.style.display = "block";
+      currentIcon.textContent = "−";
+
+    }
 
   });
 
