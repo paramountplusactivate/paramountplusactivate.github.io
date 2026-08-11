@@ -13,15 +13,15 @@
 
 <body>
 
-<div class="site">
+<div class="page">
 
   <!-- HEADER -->
   <header class="header">
 
-    <div class="brand">
-      <div class="brand-logo">P+</div>
-      <div class="brand-name">Paramount+ Guide</div>
-    </div>
+    <a href="#home" class="brand">
+      <span class="brand-logo">P+</span>
+      <span>Paramount+ Guide</span>
+    </a>
 
     <nav>
       <a href="#home">Home</a>
@@ -35,143 +35,135 @@
 
 
   <!-- HERO -->
-  <main id="home">
+  <section class="hero" id="home">
 
-    <section class="hero">
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
 
-      <!-- LEFT -->
-      <div class="hero-left">
-
-        <div class="eyebrow">
-          PARAMOUNT+ ACTIVATION GUIDE
-        </div>
-
-        <div class="small-line"></div>
-
-        <h1>
-          ParamountPlus.com/Activate –
-          <br>
-          Activate <span>Paramount+</span>
-          <br>
-          on Your Device
-        </h1>
-
-        <p class="intro">
-          Setting up Paramount+ on a smart TV or streaming device is simple
-          when you follow the correct activation steps. Learn how to connect
-          your device, enter the activation code, sign in to your account, and
-          start streaming.
-        </p>
-
-        <a href="#activation" class="button">
-          Start Activation Guide
-          <span>→</span>
-        </a>
-
+      <div class="eyebrow">
+        PARAMOUNT+ ACTIVATION GUIDE
       </div>
 
+      <div class="blue-line"></div>
 
-      <!-- RIGHT BLUE BOX -->
-      <div class="activation-box">
+      <h1>
+        ParamountPlus.com/Activate –
+        <br>
+        Activate <span>Paramount+</span>
+        <br>
+        on Your Device
+      </h1>
 
-        <div class="decor-dots"></div>
-        <div class="decor-lines"></div>
+      <p class="intro">
+        Setting up Paramount+ on a smart TV or streaming device is simple
+        when you follow the correct activation steps. Learn how to connect
+        your device, enter the activation code, sign in to your account, and
+        start streaming.
+      </p>
 
-        <div class="p-logo">
-          P+
-        </div>
+      <a href="#activation" class="start-button">
+        Start Activation Guide
+        <span>→</span>
+      </a>
 
-        <h2>
-          Activate Your Device
-        </h2>
+    </div>
+
+
+    <!-- RIGHT ACTIVATION BOX -->
+    <div class="activation-card">
+
+      <div class="dots"></div>
+
+      <div class="circle-lines"></div>
+
+      <div class="card-logo">
+        P+
+      </div>
+
+      <h2>Activate Your Device</h2>
+
+      <p>
+        Enter the activation code<br>
+        shown on your screen.
+      </p>
+
+      <div class="code">
+        XXXX-XXXX
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="features" id="activation">
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        ✓
+      </div>
+
+      <div>
+        <h3>Simple &amp; Secure Activation</h3>
 
         <p>
-          Enter the activation code<br>
-          shown on your screen.
+          Complete your setup in just a few minutes
+          and enjoy your favorite shows, movies,
+          and live sports.
         </p>
-
-        <div class="code-box">
-          XXXX-XXXX
-        </div>
-
       </div>
 
-    </section>
+    </div>
 
 
-    <!-- FEATURES -->
-    <section class="features" id="activation">
+    <div class="feature">
 
-      <div class="feature">
-
-        <div class="feature-icon">
-          ✓
-        </div>
-
-        <div class="feature-text">
-          <h3>Simple &amp; Secure Activation</h3>
-
-          <p>
-            Complete your setup in just a few minutes
-            and enjoy your favorite shows, movies,
-            and live sports.
-          </p>
-        </div>
-
+      <div class="feature-icon">
+        ▣
       </div>
 
+      <div>
+        <h3>Works on Multiple Devices</h3>
 
-      <div class="feature">
-
-        <div class="feature-icon monitor">
-          ▣
-        </div>
-
-        <div class="feature-text">
-          <h3>Works on Multiple Devices</h3>
-
-          <p>
-            Paramount+ is available on popular
-            streaming devices, smart TVs, consoles,
-            and more.
-          </p>
-        </div>
-
+        <p>
+          Paramount+ is available on popular
+          streaming devices, smart TVs, consoles,
+          and more.
+        </p>
       </div>
 
+    </div>
 
-      <div class="feature">
 
-        <div class="feature-icon question">
-          ?
-        </div>
+    <div class="feature">
 
-        <div class="feature-text">
-          <h3>Help When You Need It</h3>
-
-          <p>
-            Find solutions to common activation
-            issues and frequently asked
-            questions.
-          </p>
-        </div>
-
+      <div class="feature-icon">
+        ?
       </div>
 
-    </section>
+      <div>
+        <h3>Help When You Need It</h3>
+
+        <p>
+          Find solutions to common activation
+          issues and frequently asked
+          questions.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
 
 
-    <!-- Invisible anchors for navigation -->
-    <div id="devices" class="anchor"></div>
-    <div id="help" class="anchor"></div>
-    <div id="faq" class="anchor"></div>
-
-  </main>
+  <!-- EMPTY NAVIGATION TARGETS -->
+  <div id="devices"></div>
+  <div id="help"></div>
+  <div id="faq"></div>
 
 </div>
-
-
-<script src="script.js"></script>
 
 </body>
 </html>
